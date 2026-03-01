@@ -10,10 +10,12 @@ graph LR
     subgraph Docker Container
     C
     end
+```
 
 ### Database Schema (Star Schema)
 The data is stored using a Star Schema optimized for time-series analysis, separating the static dimensional data (Aircraft, Flights) from the rapidly changing fact data (Telemetry).
 
+```mermaid
 erDiagram
     dim_aircraft ||--o{ dim_flight : "operates"
     dim_flight ||--o{ fact_telemetry : "generates"
@@ -42,3 +44,4 @@ erDiagram
         float velocity_knots
         float engine_temp_c
     }
+```
