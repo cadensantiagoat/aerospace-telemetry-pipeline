@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  timescaledb:
+    image: timescale/timescaledb:latest-pg15
+    container_name: aerospace_db
+    environment:
+      - POSTGRES_DB=telemetry
+      - POSTGRES_USER=aerospace_admin
+      - POSTGRES_PASSWORD=supersecretpassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+
+volumes:
+  pg_data:

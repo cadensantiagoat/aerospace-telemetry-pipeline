@@ -1,0 +1,19 @@
+# 1. Security
+.env
+
+# 2. Database Volumes
+pg_data/
+data/
+
+#. Python Virtual Environments & Cache
+venv/
+.venv/
+--pycache__/
+*.pyc
+
+# 4. Mac System Files
+.DS_Store
+
+# 5. IDE / Editor Folders
+.vscode/
+.idea/
